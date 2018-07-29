@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Q3</title>
+	<style type="text/css">
+		body{
+			text-align: center;
+		}
+		.center{
+			width: 600px;
+			height: 400px;
+			position: absolute;
+			left: 50%;
+			margin-left: -300px;
+			border:2px solid;
+		}
+		.comments{
+			width: 50%;
+			overflow: auto;
+			word-break: break-all;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function cFunction(){
+			var str;
+			var r="";
+			str=document.getElementById("input").value;
+
+			for(var i=0;i<=str.length-1;i++){
+				code=str[i].charCodeAt();
+				r+=code+" ";
+			}
+			
+			document.getElementById("output").value=r;
+		}
+	
+	</script>
+</head>
+
+<body>
+	<h2 style="background-color: pink">Convert to ASCII Code</h2>
+	<div class="center">
+		Input string:&nbsp;&nbsp;<input type="text" name="string" id="input"><br>
+		<button type="button" onclick="cFunction()">Convert</button><br><br>
+
+		<!-- <input type="text" id="output" name="change" width="500" height="500"> -->
+		<textarea class="comments" rows="10" cols="10" id="output"></textarea>
+	</div>
+</body>
+
+</html>

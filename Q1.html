@@ -1,0 +1,50 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Q1</title>
+	<style type="text/css">
+		body{
+			text-align: center;
+		}
+		.center{
+			width: 600px;
+			height: 200px;
+			position: absolute;
+			left: 50%;
+			margin-left: -300px;
+			border: 2px solid;
+		}
+	</style>
+	
+	<script type="text/javascript">
+		function myFunction(){
+			var y=Math.floor(Math.random()*10+1);
+			var x,text;
+			//get input number
+			x=document.getElementById("numb").value;
+			//judge
+			if(isNaN(x)){
+				text="input error"
+			}else if(x==y){
+				text="correct! the number is "+y;
+			}else{
+				text="incorrect, the correct number is "+y;
+			}
+			document.getElementById("demo").innerHTML=text;
+		}
+
+	</script>
+</head>
+<body>
+	<h2 style="background-color: pink">Guess a number from 1 to 10</h2>
+	<br>
+	<div class="center">
+		<form>
+			Input a number:&nbsp;<input id="numb" type="text" name="number">&nbsp;<button type="button" onclick="myFunction()">Try it</button>
+			<p id="demo">result</p>
+		</form>
+	</div>
+
+</body>
+</html>

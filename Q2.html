@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Q2</title>
+</head>
+	<style type="text/css">
+		body{
+			text-align: center;
+		}
+		.center{
+			width: 600px;
+			height: 400px;
+			position: absolute;
+			left: 50%;
+			margin-left: -300px;
+			border:2px
+			solid;
+		}
+	</style>
+	<script type="text/javascript">
+		function mFunction(){
+			var x,y,text;
+			x=document.getElementById("num1").value;
+			y=document.getElementById("num2").value;
+			text=x*y;
+			document.getElementById("demo1").value=text;
+		}
+		function dFunction(){
+			var x,y,text;
+			x=document.getElementById("num1").value;
+			y=document.getElementById("num2").value;
+			text=x/y;
+			document.getElementById("demo2").value=text;
+		}
+	</script>
+<body>
+	<h2 style="background-color: pink">Multiplication and Division</h2>
+	<br>
+	<div class="center">
+		<form>
+			1st number:&nbsp;<input type="text" name="num1" id="num1"><br><br>
+			2st number:&nbsp;<input type="text" name="num2" id="num2">
+			<br><br>
+			<button type="button" onclick="mFunction()">Multiply</button><input type="text" name="Multiply"  id="demo1"><br><br>
+
+			<button type="button" onclick="dFunction()">Divide</button><input type="text" name="Divide"  id="demo2">
+
+		</form>
+	</div>
+</body>
+</html>

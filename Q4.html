@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Q4</title>
+</head>
+	<style type="text/css">
+		body{
+			text-align: center;
+		}
+		.center{
+			width: 600px;
+			height: 350px;
+			position: absolute;
+			left: 50%;
+			margin-left: -300px;
+			border:2px
+			solid;
+		}
+		.center2{
+			width: 600px;
+			height: 350px;
+			position: absolute;
+			left: 50%;
+			margin-left: -300px;
+			top: 500px;
+			border:2px
+			solid;
+		}
+		.comments{
+			width: 50%;
+			overflow: auto;
+			word-break: break-all;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function bFunction(){
+			var s;
+			s=document.getElementById("dnum").value;
+			var result=parseInt(s,10).toString(2);
+
+
+			document.getElementById("output").value=result;
+		}
+		function dFunction(){
+			var s;
+			s=document.getElementById("bnum").value;
+			var result=parseInt(s,2).toString(10);
+
+
+			document.getElementById("output2").value=result;
+		}
+	</script>
+<body>
+	<h2 style="background-color: pink">Decimal - Binary</h2>
+	<br><br>
+	<div class="center">
+	Decimal number:&nbsp;<input type="text" name="Decimal" id="dnum"><br><br>
+	<button type="button" onclick="bFunction()">convert to Binary</button><br><br>
+	<textarea class="comments" rows="10" cols="10" id="output"></textarea>
+	</div>
+
+	<div class="center2">
+	Binary number:&nbsp;<input type="text" name="Binary" id="bnum"><br><br>
+	<button type="button" onclick="dFunction()">convert to decimal</button><br><br>
+	<textarea class="comments" rows="10" cols="10" id="output2"></textarea>
+	</div>
+
+</body>
+</html>
